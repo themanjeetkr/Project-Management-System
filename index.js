@@ -1,3 +1,5 @@
-console.log(
-  "Hello, World! This is the entry point of the Project Management System backend.",
-);
+import dotenv from 'dotenv';
+dotenv.config()
+let username = process.env.APP_USERNAME;
+console.log(username);
+
