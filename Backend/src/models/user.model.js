@@ -76,6 +76,10 @@ const userSchema = new mongoose.Schema({
     }
 
     ));
+    userSchema.methods.comparePassword = async function (password) {
+        return await brypt.compare(password, this.password);
+    }
     
+
 
 export const User = mongoose.model("User", userSchema);
